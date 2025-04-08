@@ -1,36 +1,11 @@
 [ {
-  "id" : "38",
-  "date" : "04-04-2025",
-  "description" : "Book Purchase",
+  "id" : "1",
+  "date" : "08-04-2025",
+  "description" : "Internet",
   "amount" : 300
 }, {
-  "id" : "39",
-  "date" : "04-04-2025",
-  "description" : "To be deleted",
-  "amount" : 150
-}, {
-  "id" : "40",
-  "date" : "04-04-2025",
-  "description" : "Book Purchase",
-  "amount" : 300
-}, {
-  "id" : "41",
-  "date" : "04-04-2025",
-  "description" : "To be deleted",
-  "amount" : 150
-}, {
-  "id" : "42",
-  "date" : "04-04-2025",
-  "description" : "Book Purchase",
-  "amount" : 300
-}, {
-  "id" : "43",
-  "date" : "04-04-2025",
-  "description" : "dinner",
-  "amount" : 150
-}, {
-  "id" : "44",
-  "date" : "04-04-2025",
-  "description" : "Book Purchase",
-  "amount" : 300
+  "id" : "2",
+  "date" : "08-04-2025",
+  "description" : "Groceries",
+  "amount" : 500
 } ]

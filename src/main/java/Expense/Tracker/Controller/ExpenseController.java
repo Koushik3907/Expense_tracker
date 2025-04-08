@@ -12,7 +12,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @RestController
-@RequestMapping("/ExpenseTracker")
+@RequestMapping("/expenses")
 @RequiredArgsConstructor
 public class ExpenseController {
     private final ExpenseService expenseService;

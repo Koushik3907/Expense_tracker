@@ -26,30 +26,6 @@ public class ExpenseService {
         objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
     }
 
-    public void fileExist(){
-        File file=new File(file_path);
-        if(!file.exists()){
-            try{
-                file.createNewFile();
-                Files.write(Paths.get(file_path),"[]".getBytes());
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        }
-    }
-
-    public void writeExpenses(List<ExpenseEntity> expenseEntity){
-        try{
-            String json=objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(expenseEntity);
-            Files.write(Paths.get(file_path),json.getBytes());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-    }
-
-
-
     public List<ExpenseEntity> getAllexpenses(){
         fileExist();
         try{
@@ -137,4 +113,26 @@ public class ExpenseService {
         return updated;
     }
 
+
+    private void fileExist(){
+        File file=new File(file_path);
+        if(!file.exists()){
+            try{
+                file.createNewFile();
+                Files.write(Paths.get(file_path),"[]".getBytes());
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
+    private void writeExpenses(List<ExpenseEntity> expenseEntity){
+        try{
+            String json=objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(expenseEntity);
+            Files.write(Paths.get(file_path),json.getBytes());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
 }
